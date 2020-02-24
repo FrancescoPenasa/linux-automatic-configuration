@@ -15,6 +15,27 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.lis 
 sudo apt-get update 
 sudo apt-get install sublime-text
+# configure sublime text 3
+wget https://packagecontrol.io/Package%20Control.sublime-package 
+mv ~/Downloads/Package\ Control.sublime-package ~/.config/sublime-text-3/Installed\ Packages/Package\ Control.sublime-package
+cd ~/.config/sublime-text-3/Packages/User
+rm -rf Package Control.sublime-settings
+echo "{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"LaTeX-cwl",
+		"LaTeXTools",
+		"LaTeXYZ",
+		"MarkdownEditing",
+		"MarkdownPreview",
+		"Package Control"
+	]
+}
+" >> Package Control.sublime-settings
 
 # google chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
