@@ -47,7 +47,7 @@ sudo apt-get install -y texlive
 sudo apt-get install -y apt-file
 
 # slides
-sudo apt-get install libreoffice-impress
+sudo apt-get install -y libreoffice-impress
 
 # pdfreader
 sudo apt-get install -y evince
