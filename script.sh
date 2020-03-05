@@ -26,16 +26,20 @@ echo "{
 	[
 	],
 	"installed_packages":
-	[
+	[	"AutoFileName",
+        "BracketHighlighter",
 		"LaTeX-cwl",
 		"LaTeXTools",
 		"LaTeXYZ",
 		"MarkdownEditing",
 		"MarkdownPreview",
-		"Package Control"
+		"Package Control",
+		"Python Improved",
+		"Theme - Soda"
 	]
 }
 " >> Package Control.sublime-settings
+cd 
 
 # google chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
@@ -85,6 +89,14 @@ sudo apt-get -y install acpi
 sudo apt-get -y autoremove 
 sudo apt-get -y autoclean
 sudo apt-get -y update
+
+# nodejs
+sudo apt-get install curl
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install nodejs
+
+# snap
+sudo apt-get install snapd
 
 # personal aliases
 cd 
