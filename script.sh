@@ -42,9 +42,9 @@ echo "{
 cd 
 
 # google chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-rm -rf google*
+# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+# sudo dpkg -i google-chrome-stable_current_amd64.deb
+# rm -rf google*
 
 clear
 
@@ -54,17 +54,15 @@ sudo apt -y upgrade
 sudo apt -y install r-base
 
 # R-studio
-wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1578-amd64.deb
-sudo dpkg --configure -a 
-sudo apt -f -y install
-sudo dpkg -i rstudio-1.2.1578-amd64.deb
-sudo apt -f -y install
+sudo apt-get install -y gdebi-core
+wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.3.1093-amd64.deb
+sudo gdebi rstudio-server-1.3.1093-amd64.deb
 rm -rf rstudio*
 
 # python3
 sudo apt-get install -y jupyther-notebook
 sudo apt-get install -y spyder3
-sudo apt-get install -y pytho3-pip
+sudo apt-get install -y python3-pip
 sudo pip3 install numpy
 
 # latex 
@@ -72,7 +70,8 @@ sudo apt-get install -y texlive
 sudo apt-get install -y apt-file
 
 # slides
-sudo apt-get install -y libreoffice-impress
+# sudo apt-get install -y libreoffice-impress
+sudo apt-get install -y libreoffice
 
 # pdfreader
 sudo apt-get install -y evince
@@ -92,7 +91,7 @@ sudo apt-get -y update
 
 # nodejs
 sudo apt-get install curl
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install nodejs
 
 # snap
